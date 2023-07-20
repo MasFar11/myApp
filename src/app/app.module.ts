@@ -5,25 +5,32 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule }  from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppComponent } from './app.component';
-import { loginComponent } from './login/login.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
     MatIconModule,
     MatButtonModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', component: loginComponent },
-    ])
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   declarations: [
     AppComponent,
-    TopBarComponent
+    TopBarComponent,
+    ProductListComponent
   ],
   bootstrap: [
     AppComponent
