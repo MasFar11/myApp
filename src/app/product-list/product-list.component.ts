@@ -25,6 +25,10 @@ export class ProductListComponent {
     author: '' 
   });
 
+  delPrById = this.formBuilder.group({
+    id: 0, 
+  });
+
   constructor(
     private http: HttpClient,
     private formBuilder: FormBuilder) { }
@@ -50,6 +54,19 @@ export class ProductListComponent {
       next: () => {
         this.reloadData(); 
         this.newProductForm.reset(); 
+      },
+      error: (error) => {
+        console.error('Error adding product:', error);
+      }
+    });
+  }
+
+  deleteProduct(): void {
+    const deleteProductId = this.delPrById.value.id;
+    this.http.delete(`http://localhost:3000/posts/${deleteProductId}`).subscribe({
+      next: () => {
+        this.reloadData(); 
+        this.delPrById.reset();
       },
       error: (error) => {
         console.error('Error adding product:', error);
