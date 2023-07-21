@@ -16,7 +16,7 @@
         <h2>add neu Products</h2>
     </mat-card-header>
     <mat-card-content>
-        <form [formGroup]="newProductForm" (ngSubmit)="addProduct()">
+        <form [formGroup]="productForm" (ngSubmit)="addProduct()">
             <div>
               <label for="title">
                 title
@@ -39,7 +39,7 @@
         <h2>Delete</h2>
     </mat-card-header>
     <mat-card-content>
-        <form [formGroup]="delPrById" (ngSubmit)="deleteProduct()">
+        <form [formGroup]="productForm" (ngSubmit)="deleteProduct()">
             <div>
                 <label for="id">
                     Enter ID
@@ -50,3 +50,27 @@
         </form>
     </mat-card-content>
 </mat-card>
+
+<mat-card>
+    <mat-card-header>
+      <h2>Edit</h2>
+    </mat-card-header>
+    <mat-card-content>
+      <form [formGroup]="productForm" (ngSubmit)="editProduct()">
+        <div>
+          <label for="id">Enter ID</label>
+          <input id="id" type="number" formControlName="id">
+        </div>
+        <div>
+          <label for="title">Title</label>
+          <input id="title" type="text" formControlName="title">
+        </div>
+        <div>
+          <label for="author">Author</label>
+          <input id="author" type="text" formControlName="author">
+        </div>
+        <button class="button" type="submit">Edit</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  

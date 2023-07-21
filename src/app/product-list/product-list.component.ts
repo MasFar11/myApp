@@ -19,14 +19,10 @@ export class ProductListComponent {
 
   products: Product[] = []
 
-  newProductForm = this.formBuilder.group({
+  productForm = this.formBuilder.group({
     id: 0, 
     title: '', 
     author: '' 
-  });
-
-  delPrById = this.formBuilder.group({
-    id: 0, 
   });
 
   constructor(
@@ -49,11 +45,11 @@ export class ProductListComponent {
   }
 
   addProduct(): void {
-    const newProductData = this.newProductForm.value;
+    const newProductData = this.productForm.value;
     this.http.post('http://localhost:3000/posts', newProductData).subscribe({
       next: () => {
         this.reloadData(); 
-        this.newProductForm.reset(); 
+        this.productForm.reset(); 
       },
       error: (error) => {
         console.error('Error adding product:', error);
@@ -62,14 +58,30 @@ export class ProductListComponent {
   }
 
   deleteProduct(): void {
-    const deleteProductId = this.delPrById.value.id;
+    const deleteProductId = this.productForm.value.id;
     this.http.delete(`http://localhost:3000/posts/${deleteProductId}`).subscribe({
       next: () => {
         this.reloadData(); 
-        this.delPrById.reset();
+        this.productForm.reset();
       },
       error: (error) => {
         console.error('Error adding product:', error);
+      }
+    });
+  }
+
+  editProduct(): void {
+    const editProductData = this.productForm.value;
+    const editProductId = editProductData.id;
+    delete editProductData.id;
+
+    this.http.patch(`http://localhost:3000/posts/${editProductId}`, editProductData).subscribe({
+      next: () => {
+        this.reloadData();
+        this.productForm.reset();
+      },
+      error: (error) => {
+        console.error('Error editing product:', error);
       }
     });
   }
