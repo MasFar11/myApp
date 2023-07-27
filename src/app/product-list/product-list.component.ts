@@ -22,7 +22,7 @@ export class ProductListComponent {
   productForm = this.formBuilder.group({
     id: 0, 
     title: '', 
-    author: '' 
+    author: ''  
   });
 
   constructor(
