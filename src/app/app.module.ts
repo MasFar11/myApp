@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { FormsModule } from '@angular/forms';
+import { OrderListComponent } from './order-list/order-list.component';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     TopBarComponent,
-    ProductListComponent
+    ProductListComponent,
+    OrderListComponent,
   ],
   bootstrap: [
     AppComponent
