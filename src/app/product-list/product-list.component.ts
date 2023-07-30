@@ -34,7 +34,7 @@ export class ProductListComponent {
   }
 
   private reloadData(): void {
-    this.http.get<Product[]>('http://localhost:3000/posts').subscribe({
+    this.http.get<Product[]>('http://localhost:3000/products').subscribe({
       next: (data) => {
         this.products = data
       },
@@ -46,7 +46,7 @@ export class ProductListComponent {
 
   addProduct(): void {
     const newProductData = this.productForm.value;
-    this.http.post('http://localhost:3000/posts', newProductData).subscribe({
+    this.http.post('http://localhost:3000/products', newProductData).subscribe({
       next: () => {
         this.reloadData(); 
         this.productForm.reset(); 
@@ -59,7 +59,7 @@ export class ProductListComponent {
 
   deleteProduct(): void {
     const deleteProductId = this.productForm.value.id;
-    this.http.delete(`http://localhost:3000/posts/${deleteProductId}`).subscribe({
+    this.http.delete(`http://localhost:3000/products/${deleteProductId}`).subscribe({
       next: () => {
         this.reloadData(); 
         this.productForm.reset();
@@ -75,7 +75,7 @@ export class ProductListComponent {
     const editProductId = editProductData.id;
     delete editProductData.id;
 
-    this.http.patch(`http://localhost:3000/posts/${editProductId}`, editProductData).subscribe({
+    this.http.patch(`http://localhost:3000/products/${editProductId}`, editProductData).subscribe({
       next: () => {
         this.reloadData();
         this.productForm.reset();

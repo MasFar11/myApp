@@ -6,7 +6,7 @@ export interface order {
     id:number
     title:string
     name:string
-  }
+}
 
 @Component({
     selector: 'app-order-list',
@@ -16,12 +16,12 @@ export interface order {
 
 export class OrderListComponent {
     orders: order[] = []
-
+    
     orderForm = this.formBuilder.group({
         id: 0, 
         title: '', 
         name: '' 
-      });
+    });
 
     constructor(
         private http: HttpClient,

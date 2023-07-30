@@ -1,5 +1,5 @@
 {
-  "posts": [
+  "products": [
     {
       "id": 1,
       "title": "book",
@@ -14,6 +14,11 @@
       "id": 14,
       "title": "test",
       "author": "test"
+    },
+    {
+      "id": 15,
+      "title": "",
+      "author": ""
     }
   ],
   "comments": [
