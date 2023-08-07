@@ -15,7 +15,13 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { FormsModule } from '@angular/forms';
 import { OrderListComponent } from './order-list/order-list.component';
-import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './header/header.component';
+import { OrdersComponent } from './orders/orders.component';
+import { OrderDetailComponent } from './orders/order-detail/order-detail.component';
+import { OrderItemComponent } from './orders/order-list/order-item/order-item.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductDetailComponent } from './products/product-detail/product-detail.component';
+import { ProductItemComponent } from './products/product-list/product-item/product-item.component';
 
 @NgModule({
   imports: [
@@ -34,7 +40,13 @@ import { HomeComponent } from './home/home.component';
     TopBarComponent,
     ProductListComponent,
     OrderListComponent,
-    HomeComponent,
+    HeaderComponent,
+    OrdersComponent,
+    OrderDetailComponent,
+    OrderItemComponent,
+    ProductsComponent,
+    ProductDetailComponent,
+    ProductItemComponent,
   ],
   bootstrap: [
     AppComponent
