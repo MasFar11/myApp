@@ -6,9 +6,7 @@ import { FormBuilder } from '@angular/forms';
 export interface Product {
   id:number
   title:string
-  author:string
   price:number
-  Description:Text
 }
 
 @Component({
@@ -17,14 +15,12 @@ export interface Product {
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent {
-  numberOfProduct = 0
-
   products: Product[] = []
 
   productForm = this.formBuilder.group({
     id: 0, 
     title: '', 
-    author: ''  
+    price: ''  
   });
 
   constructor(
