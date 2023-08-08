@@ -1,1 +1,78 @@
-<p>order-list works!</p>
+
+<div class="card-container">
+    <mat-card>
+        <mat-card-header>
+            <h2>orders</h2>
+        </mat-card-header>
+        <mat-card-content>
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let order of orders">
+                        <td>{{ order.id }}</td>
+                        <td>{{ order.name }}</td>
+                        <td>{{ order.title }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </mat-card-content>
+
+    </mat-card>
+
+    <mat-card>
+        <mat-card-header>
+            <h2>add New Order</h2>
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="orderForm" (ngSubmit)="addOrder()">
+                <div class="mat-form-field">
+                  <input matInput placeholder="Title" formControlName="title">
+                </div>
+                <div class="mat-form-field">
+                  <input matInput placeholder="Name" formControlName="name">
+                </div>
+                <button mat-raised-button color="primary" type="submit">Add</button>
+              </form>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+        <mat-card-header>
+            <h2>Delete</h2>
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="orderForm" (ngSubmit)="deleteOrder()">
+            <div class="mat-form-field">
+                <input matInput type="number" placeholder="Enter ID" formControlName="id">
+            </div>
+            <button mat-raised-button color="warn" type="submit">Delete</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+
+    <mat-card>
+        <mat-card-header>
+          <h2>Edit</h2>
+        </mat-card-header>
+        <mat-card-content>
+          <form [formGroup]="orderForm" (ngSubmit)="editOrder()">
+            <div class="mat-form-field">
+              <input matInput type="number" placeholder="Enter ID" formControlName="id">
+            </div>
+            <div class="mat-form-field">
+              <input matInput placeholder="Title" formControlName="title">
+            </div>
+            <div class="mat-form-field">
+              <input matInput placeholder="Name" formControlName="name">
+            </div>
+            <button mat-raised-button color="accent" type="submit">Edit</button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+</div>

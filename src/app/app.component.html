@@ -1,5 +1,17 @@
-<app-header></app-header>
-<div>
-    <app-orders></app-orders>
-    <app-products></app-products>
-</div>
+<mat-tab-group>
+    <mat-tab label="home">
+      <ng-template matTabContent>
+        <app-home></app-home>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="product">
+      <ng-template matTabContent>
+        <app-products></app-products>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="order">
+      <ng-template matTabContent>
+        <app-orders></app-orders>
+      </ng-template>
+    </mat-tab>
+</mat-tab-group>

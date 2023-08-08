@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  links = ['Product', 'order', 'other'];
+  activeLink = this.links[1];
+  background = '';
 
+  toggleBackground() {
+    this.background = this.background ? '' : 'primary';
+  }
 }
