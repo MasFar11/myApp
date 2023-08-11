@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 
 export interface Product {
@@ -23,9 +24,11 @@ export class ProductListComponent {
     price: ''  
   });
 
+
   constructor(
     private http: HttpClient,
-    private formBuilder: FormBuilder) { }
+    private formBuilder: FormBuilder,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.reloadData()
@@ -82,5 +85,10 @@ export class ProductListComponent {
         console.error('Error editing product:', error);
       }
     });
+  };
+
+  navigateToEditProduct(id: number) :void {
+    console.log(this.router)
+    this.router.navigate(['product/edit-product']);
   }
 }
