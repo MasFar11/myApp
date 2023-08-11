@@ -7,8 +7,18 @@
     },
     {
       "id": 2,
-      "title": null,
-      "price": null
+      "title": "edit",
+      "price": "edit"
+    },
+    {
+      "id": 3,
+      "title": "456",
+      "price": "768"
+    },
+    {
+      "id": 4,
+      "title": "",
+      "price": ""
     }
   ],
   "comments": [

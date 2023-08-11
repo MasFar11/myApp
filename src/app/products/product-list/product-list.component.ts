@@ -88,7 +88,14 @@ export class ProductListComponent {
   };
 
   navigateToEditProduct(id: number) :void {
-    console.log(this.router)
-    this.router.navigate(['product/edit-product']);
+    this.router.navigate(['edit-product']);
+  }
+
+  navigateToAddProduct(id: number) :void {
+    this.router.navigate(['add-product']);
+  }
+  
+  navigateToDelProductById() :void {
+    this.deleteProduct();
   }
 }

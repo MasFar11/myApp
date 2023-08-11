@@ -25,18 +25,7 @@ import { ProductListComponent } from './products/product-list/product-list.compo
 import { HomeComponent } from './home/home.component';
 import { AddProductComponent } from './products/add-product/add-product.component';
 import { EditProductComponent } from './products/edit-product/edit-product.component';
-
-const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'product', component: ProductsComponent },
-  { path: 'order', component: OrdersComponent },
-  { path: 'product/edit-product', component: EditProductComponent },
-];
-
-RouterModule.forRoot([
-  {path: 'edit-product', component: EditProductComponent},
-]);
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   imports: [
@@ -52,9 +41,9 @@ RouterModule.forRoot([
     MatTabsModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    RouterModule
+    RouterModule,
+    AppRoutingModule
   ],
-  exports: [RouterModule],
   declarations: [
     AppComponent,
     HeaderComponent,

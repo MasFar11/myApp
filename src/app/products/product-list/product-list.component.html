@@ -21,9 +21,9 @@
             <td>
               <mat-icon [matMenuTriggerFor]="menu">more_horiz</mat-icon>
               <mat-menu #menu="matMenu">
-                <button mat-menu-item (click)="navigateToEditProduct(product.id)">add Product</button>
-                <button mat-menu-item>Edit Product</button>
-                <button mat-menu-item>Delete Product</button>
+                <button mat-menu-item (click)="navigateToEditProduct(product.id)">Edit Product</button>
+                <button mat-menu-item (click)="navigateToAddProduct(product.id)">add Product</button>
+                <button mat-menu-item (click)="(product.id)">delete Product</button>
               </mat-menu>
             </td>
           </tr>
