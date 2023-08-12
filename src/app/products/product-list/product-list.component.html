@@ -1,0 +1,34 @@
+<div class="card-container">
+  <mat-card>
+    <mat-card-header>
+      <h2>Products</h2>
+    </mat-card-header>
+    <mat-card-content>
+      <table class="products-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Price</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td>{{ product.id }}</td>
+            <td>{{ product.title }}</td>
+            <td>{{ product.price }}</td>
+            <td>
+              <mat-icon [matMenuTriggerFor]="menu">more_horiz</mat-icon>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="navigateToEditProduct(product.id)">Edit Product</button>
+                <button mat-menu-item (click)="navigateToAddProduct(product.id)">add Product</button>
+                <button mat-menu-item (click)="deleteProduct(product.id)">delete Product</button>
+              </mat-menu>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>
