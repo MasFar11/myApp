@@ -17,6 +17,26 @@
     },
     {
       "id": 4,
+      "title": "book",
+      "price": "5 $"
+    },
+    {
+      "id": 5,
+      "title": "name ",
+      "price": ""
+    },
+    {
+      "id": 7,
+      "title": null,
+      "price": null
+    },
+    {
+      "id": 8,
+      "title": "test",
+      "price": "test"
+    },
+    {
+      "id": 9,
       "title": "",
       "price": ""
     }
@@ -31,23 +51,8 @@
   "orders": [
     {
       "id": 1,
-      "title": null,
-      "name": null
-    },
-    {
-      "id": 2,
-      "title": null,
-      "name": null
-    },
-    {
-      "id": 3,
-      "title": "test",
-      "name": "test"
-    },
-    {
-      "id": 5,
-      "title": "test",
-      "name": "test"
+      "title": "order",
+      "name": "order"
     }
   ],
   "profile": {

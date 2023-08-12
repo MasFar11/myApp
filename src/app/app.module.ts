@@ -14,11 +14,12 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
 
 
 import { HeaderComponent } from './header/header.component';
 import { OrdersComponent } from './orders/orders.component';
-import { OrderItemComponent } from './orders/order-list/order-item/order-item.component';
 import { ProductsComponent } from './products/products.component';
 import { OrderListComponent } from './orders/order-list/order-list.component';
 import { ProductListComponent } from './products/product-list/product-list.component';
@@ -26,6 +27,8 @@ import { HomeComponent } from './home/home.component';
 import { AddProductComponent } from './products/add-product/add-product.component';
 import { EditProductComponent } from './products/edit-product/edit-product.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AddOrderComponent } from './orders/add-order/add-order.component';
+import { EditOrderComponent } from './orders/edit-order/edit-order.component';
 
 @NgModule({
   imports: [
@@ -42,19 +45,21 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserAnimationsModule,
     MatMenuModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatToolbarModule
   ],
   declarations: [
     AppComponent,
     HeaderComponent,
     OrdersComponent,
-    OrderItemComponent,
     ProductsComponent,
     OrderListComponent,
     ProductListComponent,
     HomeComponent,
     AddProductComponent,
     EditProductComponent,
+    AddOrderComponent,
+    EditOrderComponent,
   ],
   bootstrap: [
     AppComponent

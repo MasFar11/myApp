@@ -24,7 +24,6 @@ export class ProductListComponent {
     price: ''  
   });
 
-
   constructor(
     private http: HttpClient,
     private formBuilder: FormBuilder,
@@ -58,9 +57,9 @@ export class ProductListComponent {
     });
   }
 
-  deleteProduct(): void {
-    const deleteProductId = this.productForm.value.id;
-    this.http.delete(`http://localhost:3000/products/${deleteProductId}`).subscribe({
+  deleteProduct(id:any): void {
+    //const deleteProductId = this.productForm.value.id;
+    this.http.delete(`http://localhost:3000/products/${id}`).subscribe({
       next: () => {
         this.reloadData(); 
         this.productForm.reset();
@@ -88,14 +87,10 @@ export class ProductListComponent {
   };
 
   navigateToEditProduct(id: number) :void {
-    this.router.navigate(['edit-product']);
+    this.router.navigate(['product/edit-product']);
   }
 
   navigateToAddProduct(id: number) :void {
-    this.router.navigate(['add-product']);
-  }
-  
-  navigateToDelProductById() :void {
-    this.deleteProduct();
+    this.router.navigate(['product/add-product']);
   }
 }
