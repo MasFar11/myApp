@@ -18,8 +18,8 @@ export class AddOrderComponent {
       
   orderForm = this.formBuilder.group({
       id: 0, 
-      title: '', 
-      name: '' 
+      name: '', 
+      price: '' 
   });
 
   constructor(
