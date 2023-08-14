@@ -7,8 +7,8 @@
     },
     {
       "id": 3,
-      "title": "book ",
-      "price": "10"
+      "title": "book",
+      "price": "70"
     },
     {
       "id": 4,
@@ -35,11 +35,6 @@
       "title": "test",
       "name": "pen",
       "price": "2"
-    },
-    {
-      "id": 3,
-      "title": "book ",
-      "name": "28"
     },
     {
       "id": 4,
