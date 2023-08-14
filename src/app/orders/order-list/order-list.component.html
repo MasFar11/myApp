@@ -10,7 +10,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Title</th>
+                        <th>price</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -18,7 +18,7 @@
                     <tr *ngFor="let order of orders">
                         <td>{{ order.id }}</td>
                         <td>{{ order.name }}</td>
-                        <td>{{ order.title }}</td>
+                        <td>{{ order.price }}</td>
                         <td>
                           <mat-icon [matMenuTriggerFor]="menu">more_horiz</mat-icon>
                           <mat-menu #menu="matMenu">

@@ -5,7 +5,7 @@ import { Router } from "@angular/router";
 
 export interface order {
     id:number
-    title:string
+    price:string
     name:string
 }
 
@@ -20,8 +20,8 @@ export class OrderListComponent {
     
     orderForm = this.formBuilder.group({
         id: 0, 
-        title: '', 
-        name: '' 
+        name: '',
+        price: '', 
     });
 
     constructor(
@@ -74,10 +74,10 @@ export class OrderListComponent {
     }
 
     navigateToEditOrder() :void {
-        this.router.navigate(['product/edit-product']);
+        this.router.navigate(['order/edit-order']);
     }
 
     navigateToAddOrder() :void {
-        this.router.navigate(['product/add-product']);
+        this.router.navigate(['order/add-order']);
     }
 }
