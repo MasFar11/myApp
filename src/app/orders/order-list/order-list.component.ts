@@ -73,11 +73,11 @@ export class OrderListComponent {
         });
     }
 
-    navigateToEditOrder() :void {
-        this.router.navigate(['order/edit-order']);
+    navigateToEditOrder(orderId: number) :void {
+        this.router.navigate(['order/edit', orderId]);
     }
 
     navigateToAddOrder() :void {
-        this.router.navigate(['order/add-order']);
+        this.router.navigate(['order/add']);
     }
 }

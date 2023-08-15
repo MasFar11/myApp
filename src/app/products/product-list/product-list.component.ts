@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 export interface Product {
   id:number
   title:string
-  price:number
+  price:string
 }
 
 @Component({
@@ -58,7 +58,6 @@ export class ProductListComponent {
   }
 
   deleteProduct(id:any): void {
-    //const deleteProductId = this.productForm.value.id;
     this.http.delete(`http://localhost:3000/products/${id}`).subscribe({
       next: () => {
         this.reloadData(); 
@@ -86,11 +85,11 @@ export class ProductListComponent {
     });
   };
 
-  navigateToEditProduct(id: number) :void {
-    this.router.navigate(['product/edit-product']);
+  navigateToEditProduct(productId: number) :void {
+    this.router.navigate(['product/edit', productId]);
   }
 
-  navigateToAddProduct(id: number) :void {
-    this.router.navigate(['product/add-product']);
+  navigateToAddProduct() :void {
+    this.router.navigate(['product/add']);
   }
 }

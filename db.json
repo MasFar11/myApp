@@ -1,14 +1,9 @@
 {
   "products": [
     {
-      "id": 2,
-      "title": "edit",
-      "price": "100"
-    },
-    {
       "id": 3,
-      "title": "book",
-      "price": "70"
+      "title": "book1",
+      "price": "100"
     },
     {
       "id": 4,
@@ -39,12 +34,12 @@
     {
       "id": 4,
       "name": "book ",
-      "price": "100"
+      "price": "400"
     },
     {
       "id": 5,
       "name": "book",
-      "price": "30"
+      "price": "300"
     },
     {
       "id": 6,

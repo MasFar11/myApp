@@ -22,7 +22,6 @@
               <mat-icon [matMenuTriggerFor]="menu">more_horiz</mat-icon>
               <mat-menu #menu="matMenu">
                 <button mat-menu-item (click)="navigateToEditProduct(product.id)">Edit Product</button>
-                <button mat-menu-item (click)="navigateToAddProduct(product.id)">add Product</button>
                 <button mat-menu-item (click)="deleteProduct(product.id)">delete Product</button>
               </mat-menu>
             </td>
@@ -30,5 +29,8 @@
         </tbody>
       </table>
     </mat-card-content>
+    <div fxLayout="row" fxLayoutAlign="end" style="padding: 20px;">
+      <button mat-raised-button color="primary" (click)="navigateToAddProduct()">Add Product</button>
+    </div>
   </mat-card>
 </div>
