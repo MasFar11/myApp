@@ -1,7 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { order } from '../order-list/order-list.component';
+import { ActivatedRoute, Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-edit-order',
@@ -17,9 +19,33 @@ export class EditOrderComponent {
       price: '', 
   });
 
+  orderId?: number;
+
   constructor(
     private http: HttpClient,
-    private formBuilder: FormBuilder){}
+    private formBuilder: FormBuilder,
+    private route: ActivatedRoute){}
+  
+    ngOnInit() {
+      this.route.params.subscribe(params => {
+        const orderId = +params['id'];
+        if (orderId) {
+          this.loadOrderByID(orderId);
+        }
+      });
+    }
+  
+    private loadOrderByID(id: number): void {
+      this.http.get<order>(`http://localhost:3000/orders/${id}`).subscribe({
+        next: (data) => {
+          this.orderId = data.id;
+          this.orderForm.patchValue(data); 
+        },
+          error: (error) => {
+          console.error(error);
+          }
+      });
+  }
 
   editOrder(): void {
     const editorderData = this.orderForm.value;
