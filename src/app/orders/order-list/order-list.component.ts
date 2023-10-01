@@ -5,8 +5,9 @@ import { Router } from "@angular/router";
 
 export interface order {
     id:number
+    product:number
+    amount:string
     price:string
-    name:string
 }
 
 @Component({

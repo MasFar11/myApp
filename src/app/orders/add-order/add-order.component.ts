@@ -4,8 +4,8 @@ import { FormBuilder } from '@angular/forms';
 
 export interface order {
   id:number
-  title:string
-  name:string
+  product:string
+  maount:string
 }
 
 @Component({
@@ -18,8 +18,8 @@ export class AddOrderComponent {
       
   orderForm = this.formBuilder.group({
       id: 0, 
-      name: '', 
-      price: '' 
+      product: '',
+      amount: ''
   });
 
   constructor(

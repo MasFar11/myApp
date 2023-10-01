@@ -1,14 +1,9 @@
 {
   "products": [
     {
-      "id": 3,
-      "title": "book1",
-      "price": "100"
-    },
-    {
-      "id": 4,
-      "title": "book",
-      "price": "39"
+      "id": 5,
+      "title": "pen",
+      "price": "5,50"
     }
   ],
   "comments": [
@@ -21,30 +16,15 @@
   "orders": [
     {
       "id": 1,
-      "title": "test",
-      "name": "book",
-      "price": "10"
+      "product": "pen",
+      "amount": "2"
     },
     {
       "id": 2,
-      "title": "test",
-      "name": "pen",
-      "price": "2"
-    },
-    {
-      "id": 4,
-      "name": "book ",
-      "price": "400"
-    },
-    {
-      "id": 5,
-      "name": "book",
-      "price": "300"
-    },
-    {
-      "id": 6,
-      "name": "book",
-      "price": "100"
+      "product": "book",
+      "amount": "10",
+      "name": "",
+      "price": ""
     }
   ],
   "profile": {

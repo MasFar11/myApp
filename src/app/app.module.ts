@@ -15,6 +15,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 
 
@@ -46,7 +48,8 @@ import { EditOrderComponent } from './orders/edit-order/edit-order.component';
     MatMenuModule,
     RouterModule,
     AppRoutingModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatExpansionModule
   ],
   declarations: [
     AppComponent,

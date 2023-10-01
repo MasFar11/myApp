@@ -5,11 +5,11 @@
     <mat-card-content>
         <form [formGroup]="orderForm" (ngSubmit)="addOrder()">
             <mat-form-field>
-              <input matInput placeholder="name" formControlName="name">
+              <input matInput placeholder="product" formControlName="product">
             </mat-form-field>
 
             <mat-form-field>
-              <input matInput placeholder="price" formControlName="price">
+              <input matInput placeholder="amount" formControlName="amount">
             </mat-form-field>
             
             <div fxLayout="row" fxLayoutAlign="end">
