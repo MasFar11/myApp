@@ -18,6 +18,19 @@ export class AppComponent {
   navigateToOrderPage() {
     this.router.navigate(['/order']); 
   }
+  
+  navigateToAboutPage() {
+    this.router.navigate(['/about']); 
+  }
+
+  navigateToServicePage() {
+    this.router.navigate(['/service']); 
+  }
+
+  navigateToContactPage() {
+    this.router.navigate(['/contact']); 
+  }
+
   navigateToHomePage() {
     this.router.navigate(['/home']); 
   }

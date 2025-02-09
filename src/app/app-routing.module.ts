@@ -7,11 +7,17 @@ import { ProductsComponent } from './products/products.component';
 import { OrdersComponent } from './orders/orders.component';
 import { AddOrderComponent } from './orders/add-order/add-order.component';
 import { EditOrderComponent } from './orders/edit-order/edit-order.component';
+import { AboutComponent } from './about/about.component';
+import { ServiceComponent } from './service/service.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
+  { path: 'service', component: ServiceComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'product', component: ProductsComponent },
   { path: 'order', component: OrdersComponent },
   { path: 'order/add', component:AddOrderComponent },

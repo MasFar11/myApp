@@ -1,7 +1,99 @@
-<h1>"Small steps, big coder."</h1>
-<hr>
-<h2>sprint rewiew</h2>
-<hr>
-<h2>herausforderungen</h2>
-<p>github configuration</p>
-<p></p>
+
+<div class="home-container">
+  <header class="hero-section">
+    <h1 [ngStyle]="{'font-size': fontSize + 'rem'}" >Welcome to Hertz Electric Inc.</h1>
+    <p>Your trusted partner for all electrical services, from panel upgrades to EV charger installations.</p>
+    <a routerLink="/contact" class="btn">Contact Us</a>
+  </header>
+
+  <section class="introduction-1">
+    <h2 @slideIn>Our Commitment to Excellence</h2>
+    <p>
+      At Hertz Electric Inc., we pride ourselves on delivering top-quality electrical solutions for residential, commercial, and industrial clients. Our team of licensed electricians is committed to safety, innovation, and customer satisfaction.
+    </p>
+  </section>
+
+  <section class="introduction-2">
+    <p>Unlock the Power of Your Home with Cutting-Edge Electrical Services - Empowering Modern Living and Future-Ready Solutions.</p>
+  </section>
+
+  <section class="why-choose-us">
+    <h2>Why People Choose Us</h2>
+    <div class="benefits-container">
+      <div class="benefit-item">
+        <mat-icon>attach_money</mat-icon>
+        <h3>UPFRONT, FLAT RATE PRICING</h3>
+      </div>
+      <div class="benefit-item">
+        <mat-icon>verified_user</mat-icon>
+        <h3>INSURED & LICENSED ELECTRICIANS</h3>
+      </div>
+      <div class="benefit-item">
+        <mat-icon>schedule</mat-icon>
+        <h3>FLEXIBLE APPOINTMENT TIMES AND FREE ESTIMATE</h3>
+      </div>
+      <div class="benefit-item">
+        <mat-icon>eco</mat-icon>
+        <h3>HERTZ ELECTRIC IS GREEN COMPANY</h3>
+      </div>
+      <div class="benefit-item">
+        <mat-icon>build</mat-icon>
+        <h3>WORKMANSHIP & PARTS GUARANTEED</h3>
+      </div>
+      <div class="benefit-item">
+        <mat-icon>electric_car</mat-icon>
+        <h3>TESLA CERTIFIED</h3>
+      </div>
+      <div class="benefit-item">
+        <mat-icon>support_agent</mat-icon>
+        <h3>CUSTOMER SUPPORT WORKS 24/7</h3>
+      </div>
+      <!-- New Items -->
+      <div class="benefit-item">
+        <mat-icon>thumb_up</mat-icon>
+        <h3>HIGHLY RATED BY CUSTOMERS</h3>
+      </div>
+      <div class="benefit-item">
+        <mat-icon>lightbulb</mat-icon>
+        <h3>INNOVATIVE ELECTRICAL SOLUTIONS</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="proudly-serving">
+    <h2 [ngStyle]="{'font-size': fontSize + 'rem'}">Proudly Serving Bay Area California</h2>
+    <p>Since 2015</p>
+  </section>  
+  <section class="about-us">
+    <h2>About Us</h2>
+    <p>
+      Welcome to Hertz Electric Inc. - Your Trusted Electrician in the Bay Area, California!
+      At Hertz Electric Inc., we are more than just a full-service electrical consulting engineering company.
+      We are your partners in illuminating a brighter and sustainable future.
+      With our unwavering dedication to excellence, we have become the go-to electricians in the Bay Area,
+      serving California with pride.
+    </p>
+    <!-- Button to navigate to the About page -->
+    <div class="about-button">
+      <a routerLink="/about" class="btn">Learn More About Us</a>
+    </div>
+  </section>
+  <section class="services-overview">
+    <h2>Our Services</h2>
+    <div class="service-list">
+      <div class="service-item" *ngFor="let service of services" routerLink="/service">
+        <mat-icon>{{ service.icon }}</mat-icon>
+        <h3>{{ service.title }}</h3>
+        <!-- <p>{{ service.description }}</p> -->
+      </div>
+    </div>
+  </section>
+  <mat-icon svgIcon="custom-icons:logo"></mat-icon>
+  <section class="call-to-action">
+    <h2>Get Started Today</h2>
+    <p>Contact us for a free consultation and discover how we can help you with your next electrical project.</p>
+    <a routerLink="/service" class="btn">Explore Our Services</a>
+    <a routerLink="/contact" class="btn btn-secondary">Contact Us</a>
+  </section>  
+  <app-footer></app-footer>
+</div>

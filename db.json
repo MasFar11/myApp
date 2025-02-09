@@ -9,6 +9,21 @@
       "id": 4,
       "title": "book",
       "price": "39"
+    },
+    {
+      "id": 6,
+      "title": "book",
+      "price": "15"
+    },
+    {
+      "id": 7,
+      "title": "pen",
+      "price": "60"
+    },
+    {
+      "id": 8,
+      "title": "iugfiu",
+      "price": "9pz"
     }
   ],
   "comments": [
@@ -37,11 +52,6 @@
       "price": "400"
     },
     {
-      "id": 5,
-      "name": "book",
-      "price": "300"
-    },
-    {
       "id": 6,
       "name": "book",
       "price": "100"
@@ -49,5 +59,32 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "services": [
+    {
+      "title": "Main Panel Upgrade",
+      "description": "Keep your electrical system up-to-date with our professional panel upgrade services.",
+      "icon": "settings_input_component"
+    },
+    {
+      "title": "EV Charger Installation",
+      "description": "Install efficient and reliable EV chargers at your home or business.",
+      "icon": "ev_station"
+    },
+    {
+      "title": "Lighting",
+      "description": "Expert installation of energy-efficient lighting solutions for indoor and outdoor spaces.",
+      "icon": "lightbulb"
+    },
+    {
+      "title": "Tesla Powerwall Installation",
+      "description": "Store renewable energy and gain energy independence with a Tesla Powerwall.",
+      "icon": "battery_charging_full"
+    },
+    {
+      "title": "Rough Wiring",
+      "description": "Get safe and reliable rough wiring for your new construction or renovation project.",
+      "icon": "construction"
+    }
+  ]
 }

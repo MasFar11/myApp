@@ -3,8 +3,8 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { BrowserModule } from '@angular/platform-browser';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
@@ -29,6 +29,10 @@ import { EditProductComponent } from './products/edit-product/edit-product.compo
 import { AppRoutingModule } from './app-routing.module';
 import { AddOrderComponent } from './orders/add-order/add-order.component';
 import { EditOrderComponent } from './orders/edit-order/edit-order.component';
+import { AboutComponent } from './about/about.component';
+import { ServiceComponent } from './service/service.component';
+import { ContactComponent } from './contact/contact.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -60,9 +64,22 @@ import { EditOrderComponent } from './orders/edit-order/edit-order.component';
     EditProductComponent,
     AddOrderComponent,
     EditOrderComponent,
+    AboutComponent,
+    ServiceComponent,
+    ContactComponent,
+    FooterComponent,
   ],
   bootstrap: [
     AppComponent
   ]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    // Register each SVG icon separately
+    iconRegistry.addSvgIconSetInNamespace(
+      'custom-icons',
+      sanitizer.bypassSecurityTrustResourceUrl('assets/icons/icons.svg')
+    );
+  }
+}
+
